@@ -1,0 +1,28 @@
+.body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* background-color: rgb(28, 27, 32); */
+
+  background-color: #372648;
+}
+::-webkit-scrollbar {
+  color: transparent;
+  width: 0.1px;
+}
+
+.hoverimg img {
+  transition: all 0.4s ease-in-out;
+}
+.hoverimg img:hover {
+  transform: scale(1.1);
+}
+
+.boxwidth {
+  width: 30rem;
+}
+
+.wid {
+  width: 99.99%;
+}
+.wrp {
+  font-size: 1.2rem;
+}

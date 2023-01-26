@@ -1,0 +1,54 @@
+body {
+  background-image: url(https://i.postimg.cc/GhZT1N1M/4.jpg);
+  background-size: 100% 100%;
+}
+
+::-webkit-scrollbar {
+  color: transparent;
+  width: 0.1px;
+}
+
+.bgimg {
+  background-image: url(https://i.postimg.cc/jq3JM23Y/signlogo2.jpg);
+  border-radius: 15px;
+  background-size: 100% 100%;
+  /* opacity: 1.8; */
+}
+
+.white {
+  color: whitesmoke;
+}
+
+section {
+  position: relative;
+}
+
+section img {
+  position: absolute;
+  top: 11%;
+  left: 13%;
+  width: 30%;
+  border-radius: 18px;
+  box-shadow: 6px 8px 13px black;
+}
+
+@media (max-width: 900px) {
+  section img {
+    display: none;
+  }
+}
+@media (min-width: 1500px) {
+  section img {
+    height: 50%;
+    width: 22%;
+  }
+}
+
+.hover {
+  color: white;
+  transition: all 0.7s ease-in-out;
+}
+
+.hover:hover {
+  color: black;
+}

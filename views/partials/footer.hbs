@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+<link rel="stylesheet" href="/stylesheet/footer.css">
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css" />
+{{!-- footer {
+    background-color: #838383;
+    border-radius: 20px;
+  } --}}
+<style>
+  footer {
+    background-color: #838383;
+    height: 55%;
+    border-radius: 25px;
+  }
+  
+</style>
+
+<body>
+
+
+  <footer class="text-black-500 body-font">
+    <div class="container px-3 py-1 mx-auto">
+      {{!-- <div class="flex flex-wrap md:text-left text-center order-first"> --}}
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-black-900 tracking-widest text-sm mb-3"></h2>
+            <nav class="list-none mb-10 font-medium text-black-900 ">
+              <li>
+                <a href="/contect" class="mb-3 text-black-600 hover:text-blue-800">
+                  <img
+                    src="https://img.icons8.com/external-others-iconmarket/64/000000/external-book-communication-and-media-others-iconmarket.png" />
+                  Contect us </a>
+              </li>
+
+              <li>
+                <a href="/feedback" class="mb-3 text-black-600 hover:text-blue-800">
+                  <img src="https://img.icons8.com/metro/26/000000/feedback.png" />
+                  Feedback us </a>
+
+              </li>
+
+              <li>
+                <a href="/thought" class="mb-3 text-black-600 hover:text-blue-800">
+                 <img src="https://img.icons8.com/ios-filled/50/000000/thinking-male.png"/>
+                  thought</a>
+              </li>
+              <li>
+
+                <a target="_blank"
+                
+                  href="https://www.google.com/maps/place/Badodar,+Gujarat/@21.3461463,70.2795307,1157m/data=!3m1!1e3!4m5!3m4!1s0x3bfd572183be725d:0x23640565abfe8653!8m2!3d21.345535!4d70.2820408!5m1!1e4"
+                  class="text-black-600 hover:text-blue-800">
+                  
+                <img
+                  src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/000000/external-map-camping-xnimrodx-lineal-color-xnimrodx-2.png" />
+                  Badodar Map</a>
+
+              </li>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-100">
+        <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+          <a href="#" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+            <div class="logo">
+
+              <img src="https://i.postimg.cc/zvvHJYBQ/linklogo.png" alt="">
+          </a>
+        </div>
+        <span class="ml-3 text-xl">S.B.P.S.</span>
+
+        <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" id="getyear">
+        </p>
+
+        <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+          <a href="https://www.instagram.com/ig_uday_x/" rel="noopener noreferrer" class="text-gray-600 ml-1"
+            target="_blank">created by
+            <a href="https://www.instagram.com/ig_uday_x/" target="_blank">@Madhak uday </a></a>
+        </p>
+
+
+        <span class="facebook inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a  target="_blank" href="https://www.facebook.com/Badodar-school-107984145154806/?ref=pages_you_manage" class="text-gray-100">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/28f47d2113.js" crossorigin="anonymous"></script>
+  {{>script}}
+  <script>
+    const getyaer = document.getElementById('getyear')
+
+   const year = new Date().getFullYear()
+    getyear.innerText = `© ${year} S.B.P.S —`
+
+
+  </script>
+</body>
+
+</html>

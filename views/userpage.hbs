@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+<link rel="icon" href="/img/linklogo.png" type="image/x-icon" />
+<style>
+      ::-webkit-scrollbar { color: transparent; width: 0.1px; }
+
+    .ancorflex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .antd img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logout {
+        cursor: pointer;
+        float: right;
+    }
+</style>
+
+<body>
+    {{>navbar}}
+    <section class="text-gray-600 body-font">
+
+        <div class="logout" onclick="return alrtbox()">
+            <a href="/logout">
+                <img
+                    src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/45/000000/external-exit-emergency-vitaliy-gorbachev-blue-vitaly-gorbachev.png" />
+                <p>logout</p>
+            </a>
+        </div>
+
+        <div class="  container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+            <img class=" lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+                src="https://i.postimg.cc/j21w23nS/userlpagelogo.jpg">
+
+            <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hello {{datas.username}}</h1>
+
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Name</td>
+                            <td>{{datas.username}}</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Email</td>
+                            <td>{{datas.email}}</td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </section>
+
+    {{>footer}}
+    {{>script}}
+    <script>
+        function alrtbox() {
+            return confirm("are you sure ?? Logout");
+        }
+    </script>
+
+</body>
+</html>

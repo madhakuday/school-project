@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+
+<style>
+      ::-webkit-scrollbar { color: transparent; width: 0.1px; }
+
+</style>
+<body>
+    {{>navbar}}
+
+    <div class="container mb-5 mt-5">
+        <h1 class="h1">Update</h1>
+        <form action="/update/{{club._id}}" method="post" class="form ">
+
+            <label for="name">Name</label>
+            <input
+                class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-balck-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-ou"
+                value="{{club.username}}" type="text" name="username" id="name" placeholder="name">
+
+            <label for="email">Email</label>
+            <input
+                class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-balck-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-ou"
+                value="{{club.email}}" type="emailemail" name="email" id="emailemail" placeholder="email">
+ 
+            <button type="submit" class="mt-3 btn btn-danger">Update</button>
+        </form>
+    </div>
+
+
+    {{>footer}}
+    {{>script}}
+
+</body>
+
+</html>

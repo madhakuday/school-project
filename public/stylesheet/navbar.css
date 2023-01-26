@@ -1,0 +1,88 @@
+.logo {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.2);
+}
+.logo img {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+.block {
+  display: none;
+}
+.top {
+  margin-top: 5px;
+}
+
+ul li a {
+  font-weight: 700;
+}
+
+ul li a:hover {
+  color: red;
+  text-shadow: 2px 2px 2px #bcafaf;
+}
+
+.nav .nav-link:hover {
+  color: red;
+}
+
+.btn {
+  box-shadow: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.9s ease-in-out;
+}
+
+.btn:focus {
+  box-shadow: transparent;
+  border: transparent;
+  outline: transparent;
+}
+#btn {
+  box-shadow: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.9s ease-in-out;
+}
+.disblock {
+  display: block;
+}
+#btn:focus {
+  box-shadow: transparent;
+  border: transparent;
+  outline: transparent;
+}
+
+.tra {
+  transition: all 0.9s ease-out;
+}
+
+/* media */
+@media (max-width: 315px) {
+  .marto {
+    margin-top: 1%;
+  }
+}
+/* ul > img {
+  height: 100px;
+  width: 100px;
+} */
+ul li img {
+  height: 20px;
+  width: 20px;
+}
+
+.userlogo img {
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+.navcolor {
+  background-color: #efefef;
+}

@@ -1,0 +1,188 @@
+<html lang="en">
+{{>header}}
+<link rel="icon" href="/img/linklogo.png" type="image/x-icon" />
+<link rel="stylesheet" href="/stylesheet/navbar.css">
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .container2 {
+    height: 80px;
+    width: 100%;
+    /* background: rgb(0, 0, 0);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -20px;
+  }
+
+
+  .line {
+    height: 8px;
+    width: 25px;
+    border-radius: 5px;
+    background: rgb(0, 0, 0);
+    position: relative;
+    transition: all 0.5s;
+  }
+
+  .line::before,
+  .line::after {
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    background: black;
+    transition: all 0.8s ease-in-out;
+  }
+
+  .line::before {
+    transform: translateY(-16px);
+  }
+
+  .box .line::after {
+    transform: translateY(16px);
+  }
+
+  .container2.open .line {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .container2.open .line::before {
+    height: 3px;
+    background: white;
+    box-shadow: 0px 0px 0px 2px red;
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  .container2.open .line::after {
+    height: 3px;
+    background: white;
+    box-shadow: 0px 0px 0px 2px yellow;
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+</style>
+
+<body>
+  <script src="https://kit.fontawesome.com/28f47d2113.js" crossorigin="anonymous"></script>
+
+
+  <nav class="navbar navbar-expand-lg navcolor">
+    <div class="container-fluid">
+      <button id="btn" class="btn navbar-toggler " type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="" aria-expanded="true" aria-label="Toggle navigation">
+    
+        <div class="container2">
+           <div class="box">
+            <div class="line"></div>
+          </div>
+        </div>
+      </button>
+
+      <script>
+        const manuBtn = document.querySelector('.container2');
+        let manuopen = false;
+        manuBtn.addEventListener('click', () => {
+          if (!manuopen) {
+            manuBtn.classList.add('open')
+            manuopen = true;
+          } else {
+            manuBtn.classList.remove('open')
+            manuopen = false;
+          }
+        })
+      </script>
+
+
+
+      <div class="collapse navbar-collapse  tra top q7899999*9+6 disblock ">
+        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+
+        <p class="nav-item logo">
+          <a href="/main">
+            <img src="https://i.postimg.cc/zvvHJYBQ/linklogo.png" alt="logo">
+          </a>
+        </p>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/main">
+            <img class="imgs" src="https://img.icons8.com/material-outlined/24/000000/home--v2.png" />
+            Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/about">
+
+            <img class="imgs" height="30px" width="30px"
+              src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-history-archaeology-flaticons-flat-flat-icons.png" />
+            About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/team">
+            <img class="imgs"
+              src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-team-management-kiranshastry-lineal-color-kiranshastry-1.png" />
+            Our team</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/gallery">
+            <img class="imgs"
+              src="https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/000000/external-image-seo-xnimrodx-lineal-gradient-xnimrodx.png" />
+
+            Photo gallery</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/achievement">
+            <img class="imgs"
+              src="https://img.icons8.com/external-anggara-outline-color-anggara-putra/32/000000/external-award-user-interface-anggara-outline-color-anggara-putra-2.png" />
+            Achievement</a>
+        </li>
+
+       
+       
+        </ul>
+        <div class="d-flex userlogo">
+          <a href="/userpage">
+            <img
+              src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <script>
+    const disblock = document.querySelector(".disblock");
+    const btn = document.getElementById("btn");
+
+
+    btn.addEventListener("click", () => {
+      if (disblock.style.display != "block") {
+        disblock.style.display = "block";
+      } else {
+        disblock.style.display = "none";
+      }
+    })
+  </script>
+
+  {{>script}}
+</body>
+
+</html>
