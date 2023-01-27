@@ -94,7 +94,7 @@ router.get("/thought", (req, res) => {
 router.post("/sign", async (req, res) => {
   try {
     const { username, email, password } = req.body;
-
+    console.log("Body", req.body);
     if (!username || !email || !password) {
       req.session.message = {
         type: "primary",
@@ -141,7 +141,9 @@ router.post("/sign", async (req, res) => {
 
     res.status(201).redirect("/login");
   } catch (err) {
-    res.status(400).redirect("/sign");
+    console.log("er", err);
+    // res.status(400).redirect("/sign");
+    res.status(400).send({ message: "Not valid data" });
   }
 });
 
@@ -167,7 +169,9 @@ router.post("/login", async (req, res) => {
       res.redirect("/login");
     }
   } catch (err) {
-    res.redirect("/sign");
+    console.log("er", err);
+    // res.redirect("/sign");
+    res.status(400).send({ message: "Not valid data" });
   }
 });
 
@@ -176,6 +180,7 @@ router.get("/logout", auth, (req, res) => {
     res.clearCookie("loginusercoockie");
     res.redirect("/login");
   } catch (err) {
+    console.log("er", err);
     console.log(er);
   }
 });
