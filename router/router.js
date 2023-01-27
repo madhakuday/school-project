@@ -44,7 +44,7 @@ router.get("/achievement", auth, (req, res) => {
   res.render("achievement");
 });
 
-router.get("/main", auth, (req, res) => {
+router.get("/home", auth, (req, res) => {
   res.status(200).render("main");
 });
 
@@ -143,7 +143,7 @@ router.post("/sign", async (req, res) => {
   } catch (err) {
     console.log("er", err);
     // res.status(400).redirect("/sign");
-    res.status(400).send({ message: "Not valid data" });
+    res.status(400).send({ message: "Not valid data", error: err });
   }
 });
 
@@ -159,7 +159,7 @@ router.post("/login", async (req, res) => {
         process.env.LOGINUSERSERCRETKEY
       );
       res.cookie("loginusercoockie", token);
-      res.redirect("/main");
+      res.redirect("/home");
     } else {
       req.session.message = {
         type: "danger",
@@ -171,7 +171,7 @@ router.post("/login", async (req, res) => {
   } catch (err) {
     console.log("er", err);
     // res.redirect("/sign");
-    res.status(400).send({ message: "Not valid data" });
+    res.status(400).send({ message: "Not valid data", error: err });
   }
 });
 
